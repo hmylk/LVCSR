@@ -1,8 +1,12 @@
 # LVCSR
 1 .LVCSR_API_API int LVCSR_Init(const char* sysDir,const char*  cfgFile,int lineNum);
+
 初始化系统模型，线程资源准备等工作
+
 sysDir [in]： 模型路径，一般为 ../model
+
 cfgFile[in]：配置文件名称，一般为scripts下的配置文件名
+
 lineNum[in]： 线程开启个数
 
 
