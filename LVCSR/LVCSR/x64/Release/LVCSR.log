@@ -1,0 +1,196 @@
+﻿生成启动时间为 2017/3/1 15:10:42。
+     1>项目“F:\work2\LVCSR\LVCSR\LVCSR.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Release\LVCSR.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“x64\Release\LVCSR.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I..\include /I..\include\cn /I.\CreateFeature /I..\include\cn\include /Zi /nologo /W1 /WX- /O2 /Ot /D WIN32 /D WIN64 /D _WINDOWS /D _ISDTLIB /D INSTANTIATE_TEMPLATES /D _CRT_SECURE_NO_DEPRECATE /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt CreateFeature\cFFT.cpp CreateFeature\CreateFeature.cpp CreateFeature\feat.cpp CreateFeature\GMMParam.cpp CreateFeature\logmath.cpp CreateFeature\mfcc.cpp CreateFeature\onlinecms.cpp CreateFeature\PitchTracker.cpp CreateFeature\PLP.cpp CreateFeature\PLP_NCC.cpp CreateFeature\Rastaplp.cpp CreateFeature\rsrfft.cpp LVCSR_API.cpp TSRBuffer.cpp
+         cFFT.cpp
+         CreateFeature.cpp
+     1>F:\work2\LVCSR\include\../include/comm.h(105): warning C4005: “ASSERT2”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(37) : 参见“ASSERT2”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(107): warning C4005: “ASSERT3”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(38) : 参见“ASSERT3”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(109): warning C4005: “ASSERT4”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(39) : 参见“ASSERT4”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(111): warning C4005: “ASSERT5”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(40) : 参见“ASSERT5”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(113): warning C4005: “ASSERT6”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(41) : 参见“ASSERT6”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(116): warning C4005: “WARNING1”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(43) : 参见“WARNING1”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(118): warning C4005: “WARNING2”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(44) : 参见“WARNING2”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(120): warning C4005: “WARNING3”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(45) : 参见“WARNING3”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(122): warning C4005: “WARNING4”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(46) : 参见“WARNING4”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(167): warning C4005: “ReadOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(60) : 参见“ReadOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(168): warning C4005: “WriteOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(61) : 参见“WriteOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(169): warning C4005: “AppendOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(62) : 参见“AppendOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(170): warning C4005: “TextReadOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(63) : 参见“TextReadOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(171): warning C4005: “TextWriteOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(64) : 参见“TextWriteOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(172): warning C4005: “TextAppendOpen”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\comm.h(65) : 参见“TextAppendOpen”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(175): warning C4005: “MAX”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\RastaPlp.h(52) : 参见“MAX”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(176): warning C4005: “MIN”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\RastaPlp.h(51) : 参见“MIN”的前一个定义
+     1>F:\work2\LVCSR\include\../include/comm.h(323): warning C4005: “ENHANCED_RESULT”: 宏重定义
+                 f:\work2\lvcsr\include\../LVCSR/LVCSR_API.h(20) : 参见“ENHANCED_RESULT”的前一个定义
+     1>f:\work2\lvcsr\include\logmath.h(33): warning C4005: “LOGZERO”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\plp.h(34) : 参见“LOGZERO”的前一个定义
+     1>f:\work2\lvcsr\include\logmath.h(46): warning C4005: “MINLARG”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\plp.h(37) : 参见“MINLARG”的前一个定义
+     1>f:\work2\lvcsr\include\logmath.h(48): warning C4005: “MINEARG”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\plp.h(36) : 参见“MINEARG”的前一个定义
+         feat.cpp
+         GMMParam.cpp
+         logmath.cpp
+         mfcc.cpp
+         onlinecms.cpp
+     1>F:\work2\LVCSR\include\../include/comm.h(323): warning C4005: “ENHANCED_RESULT”: 宏重定义
+                 f:\work2\lvcsr\include\../LVCSR/LVCSR_API.h(20) : 参见“ENHANCED_RESULT”的前一个定义
+         PitchTracker.cpp
+         PLP.cpp
+         PLP_NCC.cpp
+     1>CreateFeature\PLP_NCC.cpp(472): warning C4002: “ASSERT2”宏的实参太多
+     1>CreateFeature\PLP_NCC.cpp(557): warning C4002: “ASSERT2”宏的实参太多
+     1>CreateFeature\PLP_NCC.cpp(583): warning C4002: “ASSERT2”宏的实参太多
+     1>CreateFeature\PLP_NCC.cpp(974): warning C4002: “ASSERT2”宏的实参太多
+         Rastaplp.cpp
+     1>f:\work2\lvcsr\lvcsr\createfeature\cFFT.h(23): warning C4005: “PI”: 宏重定义
+                 f:\work2\lvcsr\lvcsr\createfeature\PitchTracker.h(38) : 参见“PI”的前一个定义
+         rsrfft.cpp
+         LVCSR_API.cpp
+     1>F:\work2\LVCSR\include\comm.h(323): warning C4005: “ENHANCED_RESULT”: 宏重定义
+                 f:\work2\lvcsr\include\../LVCSR/LVCSR_API.h(20) : 参见“ENHANCED_RESULT”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(37): warning C4005: “ASSERT2”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(105) : 参见“ASSERT2”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(38): warning C4005: “ASSERT3”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(107) : 参见“ASSERT3”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(39): warning C4005: “ASSERT4”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(109) : 参见“ASSERT4”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(40): warning C4005: “ASSERT5”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(111) : 参见“ASSERT5”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(41): warning C4005: “ASSERT6”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(113) : 参见“ASSERT6”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(43): warning C4005: “WARNING1”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(116) : 参见“WARNING1”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(44): warning C4005: “WARNING2”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(118) : 参见“WARNING2”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(45): warning C4005: “WARNING3”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(120) : 参见“WARNING3”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(46): warning C4005: “WARNING4”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(122) : 参见“WARNING4”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(60): warning C4005: “ReadOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(167) : 参见“ReadOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(61): warning C4005: “WriteOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(168) : 参见“WriteOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(62): warning C4005: “AppendOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(169) : 参见“AppendOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(63): warning C4005: “TextReadOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(170) : 参见“TextReadOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(64): warning C4005: “TextWriteOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(171) : 参见“TextWriteOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(65): warning C4005: “TextAppendOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(172) : 参见“TextAppendOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(68): warning C4005: “min”: 宏重定义
+                 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include\windef.h(194) : 参见“min”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(69): warning C4005: “max”: 宏重定义
+                 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include\windef.h(190) : 参见“max”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(33): warning C4005: “TPI”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(27) : 参见“TPI”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(34): warning C4005: “LOGZERO”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(33) : 参见“LOGZERO”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(36): warning C4005: “MINEARG”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(48) : 参见“MINEARG”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(37): warning C4005: “MINLARG”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(46) : 参见“MINLARG”的前一个定义
+         TSRBuffer.cpp
+     1>F:\work2\LVCSR\include\comm.h(323): warning C4005: “ENHANCED_RESULT”: 宏重定义
+                 f:\work2\lvcsr\include\../LVCSR/LVCSR_API.h(20) : 参见“ENHANCED_RESULT”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(37): warning C4005: “ASSERT2”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(105) : 参见“ASSERT2”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(38): warning C4005: “ASSERT3”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(107) : 参见“ASSERT3”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(39): warning C4005: “ASSERT4”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(109) : 参见“ASSERT4”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(40): warning C4005: “ASSERT5”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(111) : 参见“ASSERT5”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(41): warning C4005: “ASSERT6”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(113) : 参见“ASSERT6”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(43): warning C4005: “WARNING1”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(116) : 参见“WARNING1”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(44): warning C4005: “WARNING2”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(118) : 参见“WARNING2”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(45): warning C4005: “WARNING3”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(120) : 参见“WARNING3”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(46): warning C4005: “WARNING4”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(122) : 参见“WARNING4”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(60): warning C4005: “ReadOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(167) : 参见“ReadOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(61): warning C4005: “WriteOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(168) : 参见“WriteOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(62): warning C4005: “AppendOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(169) : 参见“AppendOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(63): warning C4005: “TextReadOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(170) : 参见“TextReadOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(64): warning C4005: “TextWriteOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(171) : 参见“TextWriteOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(65): warning C4005: “TextAppendOpen”: 宏重定义
+                 F:\work2\LVCSR\include\comm.h(172) : 参见“TextAppendOpen”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(68): warning C4005: “min”: 宏重定义
+                 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include\windef.h(194) : 参见“min”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\comm.h(69): warning C4005: “max”: 宏重定义
+                 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include\windef.h(190) : 参见“max”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(33): warning C4005: “TPI”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(27) : 参见“TPI”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(34): warning C4005: “LOGZERO”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(33) : 参见“LOGZERO”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(36): warning C4005: “MINEARG”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(48) : 参见“MINEARG”的前一个定义
+     1>f:\work2\lvcsr\lvcsr\createfeature\plp.h(37): warning C4005: “MINLARG”: 宏重定义
+                 f:\work2\lvcsr\include\logmath.h(46) : 参见“MINLARG”的前一个定义
+         Generating Code...
+     1>f:\work2\lvcsr\lvcsr\lvcsr_api.cpp(692): warning C4715: “CleanZero”: 不是所有的控件路径都返回值
+     1>f:\work2\lvcsr\lvcsr\lvcsr_api.cpp(779): warning C4700: 使用了未初始化的局部变量“tcount”
+     1>f:\work2\lvcsr\lvcsr\createfeature\rastaplp.cpp(800): warning C4700: 使用了未初始化的局部变量“wtindex”
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(F:\work2\LVCSR\x64\Release\LVCSR.dll) 与 Linker 的 OutputFile 属性值(F:\hongmi\testenv\newTBNR_env\bin_neweng\LVCSR_API.dll)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(LVCSR) 与 Linker 的 OutputFile 属性值(LVCSR_API)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\hongmi\testenv\newTBNR_env\bin_neweng\LVCSR_API.dll" /NOLOGO /LIBPATH:"..\reclib-windows-4.3.3-test" RecEngine.lib WFSTDecoder.lib Grammar.lib isdttools.lib tdecoding.lib tshare.lib srilm.lib ippcoreem64t.lib ippsem64t.lib ippsrem64t.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\LVCSR.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"F:\work2\LVCSR\x64\Release\LVCSR.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\LVCSR_test_demo\API_Lib\LVCSR_API.lib" /MACHINE:X64 /DLL x64\Release\cFFT.obj
+         x64\Release\CreateFeature.obj
+         x64\Release\feat.obj
+         x64\Release\GMMParam.obj
+         x64\Release\logmath.obj
+         x64\Release\mfcc.obj
+         x64\Release\onlinecms.obj
+         x64\Release\PitchTracker.obj
+         x64\Release\PLP.obj
+         x64\Release\PLP_NCC.obj
+         x64\Release\Rastaplp.obj
+         x64\Release\rsrfft.obj
+         x64\Release\LVCSR_API.obj
+         x64\Release\TSRBuffer.obj
+         RecEngine.lib(onepass.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+            正在创建库 ..\LVCSR_test_demo\API_Lib\LVCSR_API.lib 和对象 ..\LVCSR_test_demo\API_Lib\LVCSR_API.exp
+         正在生成代码
+         已完成代码的生成
+         LVCSR.vcxproj -> F:\work2\LVCSR\x64\Release\LVCSR.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\hongmi\testenv\newTBNR_env\bin_neweng\LVCSR_API.dll;#2" /manifest x64\Release\LVCSR.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“x64\Release\LVCSR.unsuccessfulbuild”。
+         正在对“x64\Release\LVCSR.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\work2\LVCSR\LVCSR\LVCSR.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:20.47

@@ -1,0 +1,9 @@
+070619刘赵杰提供
+是根据LVCSR在spontaneous上的改进（以声学模型为主）
+包括plp、hlda、rusta等，也可以有分人cms
+不包含VTLN（需要预解码提供phonelist信息），太慢
+类似Segment，为了编译，更改了几个文件，包括
+fft在此中与epd冲突，改名cfft
+和解码器include冲突的类删除logmath，合并cpp和h升级成为新的头文件（以后如没升级无需改变）
+mfcc差别较大（根据刘赵杰师兄的建议，替换掉不简单！）改类名MFCC2？
+在CreateFeature增加了一个数据类型的定义

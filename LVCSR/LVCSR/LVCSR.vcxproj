@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B6A7853-FF5B-4436-BA04-62A3D55FDA37}</ProjectGuid>
+    <RootNamespace>LVCSR</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExecutablePath>F:\dependence\STLport-5.2.1_vc2010x64\bin;F:\dependence\stl_2010\STLport-5.2.1\STLport-5.2.1\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>F:\dependence\STLport-5.2.1_vc2010x64\stlport;F:\dependence\Compiler\11.0\074\cpp\ipp\em64t\include;F:\dependence\Compiler\11.0\074\cpp\mkl\include;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>F:\dependence\STLport-5.2.1_vc2010x64\lib;F:\dependence\stl_2010\STLport-5.2.1\STLport-5.2.1\lib;F:\dependence\Compiler\11.0\074\cpp\ipp\em64t\lib;F:\dependence\Compiler\11.0\074\cpp\ipp\em64t\stublib;F:\dependence\Compiler\11.0\074\cpp\mkl\em64t\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib\x64;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Visual Leak Detector\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\include\cn;.\CreateFeature;..\include\cn\include</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_WINDOWS;_ISDTLIB;INSTANTIATE_TEMPLATES;_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\reclib-windows-4.3.3-test;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>RecEngine.lib;WFSTDecoder.lib;Grammar.lib;isdttools.lib;tdecoding.lib;tshare.lib;srilm.lib;ippcoreem64t.lib;ippsem64t.lib;ippsrem64t.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\LVCSR_test_demo\API_Lib\LVCSR_API.lib</ImportLibrary>
+      <OutputFile>F:\hongmi\testenv\newTBNR_env\bin_neweng\LVCSR_API.dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CreateFeature\cFFT.cpp" />
+    <ClCompile Include="CreateFeature\CreateFeature.cpp" />
+    <ClCompile Include="CreateFeature\feat.cpp" />
+    <ClCompile Include="CreateFeature\GMMParam.cpp" />
+    <ClCompile Include="CreateFeature\logmath.cpp" />
+    <ClCompile Include="CreateFeature\mfcc.cpp" />
+    <ClCompile Include="CreateFeature\onlinecms.cpp" />
+    <ClCompile Include="CreateFeature\PitchTracker.cpp" />
+    <ClCompile Include="CreateFeature\PLP.cpp" />
+    <ClCompile Include="CreateFeature\PLP_NCC.cpp" />
+    <ClCompile Include="CreateFeature\Rastaplp.cpp" />
+    <ClCompile Include="CreateFeature\rsrfft.cpp" />
+    <ClCompile Include="LVCSR_API.cpp" />
+    <ClCompile Include="TSRBuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="commStuct.h" />
+    <ClInclude Include="CycLink.h" />
+    <ClInclude Include="LateralLink.h" />
+    <ClInclude Include="LVCSR_API.h" />
+    <ClInclude Include="TSRBuffer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

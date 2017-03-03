@@ -1,0 +1,187 @@
+
+#ifndef __LVCSR_API_H_
+#define __LVCSR_API_H_
+
+
+#ifndef LVCSR_API_API
+#ifdef WIN32
+#define LVCSR_API_API  __declspec(dllexport)
+#else
+#define LVCSR_API_API
+typedef long long int __int64;
+#endif
+#endif
+
+/************************************************************************/
+/* Data struct  definition                                              */
+/************************************************************************/
+#include "commStuct.h"
+
+#define ENHANCED_RESULT
+
+enum SOUND_TYPE
+{	
+	MALE=0, 
+	FEMALE, 
+	MUSIC, 
+	NOISE, 
+	UNK,
+};
+
+struct ACand
+{
+	char *text;         // Candidate rec result 
+	float score;        // Candidate score，0.00~100.00，candNum个
+	float startTime;    // the start time，Unit for seconds
+	float endTime;      // the end time，Unit for seconds
+	ACand *next;        // next Candidate rec struct
+
+#ifdef ENHANCED_RESULT
+	char * phone;       //phoneme string
+	char * segTime;     //segTime string
+#endif
+	ACand ()
+	{
+		text = 0;
+		next = 0;
+		score = startTime = endTime = 0;
+		phone = 0;
+		segTime = 0;
+	};
+};
+
+//lvcsr result struct
+struct WordResult   
+{
+	int   candNum;     // Candidate rec result number ,at least one , the first ACand is 1-best
+	ACand *cands;      // Candidate result link
+	WordResult *next;  //the next sentence result
+	WordResult()
+	{
+		candNum = 0;
+		cands = 0;
+		next = 0;
+	}
+};
+
+struct Task	{                       // rec result/decode task definition
+	void         *newSet;           // could also be pResultArray, pWORDRESULT
+	void         *latSet;	        //lattice set
+	int           frameNum;         // could also be numberOfTasks, wordNumber
+	long long         sessionId;
+	unsigned long saveFileIdx;      // real serialNum, from 0 , 类内唯一
+	unsigned long dataTimestamp;    // sample of start
+	long          decoderId;        // could also be hHandle
+	unsigned long dataTimestampEnd; // sample of end
+	SOUND_TYPE    soundType;
+};
+
+struct aTriPhoneLnk 
+{
+	int dur;
+	int start;
+	char phone[32];
+	char lphone[32];
+	char rphone[32];
+	unsigned short phoneIdx;		// corresponding to state index
+	float PLPP;						// PLPP confidence
+	aTriPhoneLnk()
+	{
+		dur			= 0;
+		start		= 0;
+		phone[0]	= '\0';
+		lphone[0]	= '\0';
+		rphone[0]	= '\0';
+		phoneIdx = 0;
+		PLPP = -100;
+	}
+};
+
+//for a keyword 
+typedef struct _aWORDLINK
+{
+	char	word[256];
+	int		starttime;			//start time in frame numbers
+	int		endtime;			//end time in frame numbers
+	float	cn_confidence;		//confidence from confusion network
+	float	plpp_confidence;	//confidence from the plpp
+	float	mix_confidence;		//confidence from fusions
+	int		nPhone;
+	aTriPhoneLnk* triphone;		//tri-phone information
+	_aWORDLINK()
+	{
+		word[0]			='\0';
+		starttime		=0;
+		endtime			=0;
+		cn_confidence	=0;
+		plpp_confidence	=0;
+		mix_confidence	=0;
+		triphone		=0;
+		nPhone			=0;
+	}
+}aWORDLINK;
+
+enum SPEECHTYPE
+{TSR_ALAW_PCM         = 0,       //8k 8bit a-law
+TSR_ULAW_PCM         = 1,       //8k 8bit u-law
+TSR_LINEAR_PCM       = 2,       //8k 8bit linear pcm, centered at value 128
+TSR_ADPCM            = 3,       //ADPCM
+TSR_RAW_16           = 4 | TSR_LINEAR_PCM,   //8k 16 bit raw data
+TSR_16K_16           = 8 | TSR_RAW_16,       //16k 16 bit raw data
+TSR_MFCC             = 16,      //TSR MFCC format
+TSR_MFCCPLP          = 17,
+TSR_RASTAPLP         = 18,
+TSR_WITHEAD          = 19,      //with Head
+TSR_MFCC_FE          = 8 | TSR_MFCC,      //TSR MFCC format of Female
+TSR_MFCCPLP_FE       = 8 | TSR_MFCCPLP,
+TSR_RASTAPLP_FE      = 8 | TSR_RASTAPLP,
+TSR_WITHEAD_FE       = 8 | TSR_WITHEAD,
+TSR_SILENCE          = 32,      //silence
+TSR_LOST             = 33,      //lost samples   // 64
+};
+
+enum LVCSR_ERROR
+{
+	LVCSR_SUCCESS = 0,
+	LVCSR_ERROR_COMMON = -1,
+	LVCSR_ERROR_LICENSE_INVALID = -2
+};
+
+enum LVCSR_EVENT
+{
+	LVCSR_EVENT_START_COMPLETE = 0,   // 启动识别完成
+	LVCSR_EVENT_STOP_COMPLETE,        // 停止识别完成
+	LVCSR_EVENT_RECOGNITION_COMPLETE, // 识别完成
+	LVCSR_EVENT_RECOGNITION_DOING,    // 识别中
+	LVCSR_EVENT_RECOGNITION_IDLE,     // 空闲
+	LVCSR_EVENT_RECOGNITION_ERROR,    // 异常
+};
+
+
+/************************************************************************/
+/* Interface function  definition                                       */
+/************************************************************************/
+LVCSR_API_API int LVCSR_Init(const char* sysDir,const char*  cfgFile,int lineNum);
+
+LVCSR_API_API int LVCSR_Exit();
+
+LVCSR_API_API int LVCSR_Start(int sessionId=0);
+
+LVCSR_API_API int LVCSR_StopRecording(int sessionId = 0);
+
+LVCSR_API_API int LVCSR_Stop(int sessionId);
+
+LVCSR_API_API int LVCSR_SendData(FeSegInfo* segInfo,FeSpeechAttri* dataInfo,int sessionId);
+
+// only out to user, can't in a parameter
+typedef void (*LVCSR_ResultCallback) (FeSegInfo * pResultArray, int sessionId);   
+typedef void (*LVCSR_ProcessEventCallback) (int eventID, int sessionId);
+
+LVCSR_API_API int LVCSR_SetResultCallbackFunc(LVCSR_ResultCallback pFunc, int sessionId = 0);
+
+LVCSR_API_API int LVCSR_SetEventCallbackFunc(LVCSR_ProcessEventCallback pFunc, int sessionId = 0);
+
+LVCSR_API_API int LVCSR_SampleRate();
+
+LVCSR_API_API int LVCSR_SetParam(char *paramname, char *paramvalue, int sessionId);
+#endif
